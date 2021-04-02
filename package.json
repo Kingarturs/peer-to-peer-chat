@@ -1,0 +1,30 @@
+{
+  "name": "peer-to-peer-chat",
+  "version": "1.0.0",
+  "description": "A simple peer to peer chat app for Distributed systems' architecture class",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.5",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kingarturs/peer-to-peer-chat.git"
+  },
+  "keywords": [
+    "node",
+    "socket.io"
+  ],
+  "author": "Luis Arturo García González",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Kingarturs/peer-to-peer-chat/issues"
+  },
+  "homepage": "https://github.com/Kingarturs/peer-to-peer-chat#readme"
+}
