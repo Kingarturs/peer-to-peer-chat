@@ -4,7 +4,9 @@
   "description": "A simple peer to peer chat app for Distributed systems' architecture class",
   "main": "server.js",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.5",
     "socket.io": "^4.0.1"
   },

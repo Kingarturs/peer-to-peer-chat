@@ -34,5 +34,36 @@ socket.on("connect", () => {
 });
 
 socket.on("Signup", (data) => {
-    
+    Swal.fire({
+        position: 'bottom-end',
+        icon: 'success',
+        title: data,
+        showConfirmButton: false,
+        timer: 1500,
+        toast: true
+    }).then(() => {
+        window.location.href = "login.html"
+    })
+})
+
+socket.on("UserMsgSuccess", (data) => {
+    Swal.fire({
+        position: 'bottom-end',
+        icon: 'success',
+        title: data,
+        showConfirmButton: false,
+        timer: 1500,
+        toast: true
+    })
+})
+
+socket.on("UserMsgError", (data) => {
+    Swal.fire({
+        position: 'bottom-end',
+        icon: 'error',
+        title: data,
+        showConfirmButton: false,
+        timer: 1500,
+        toast: true
+    })
 })

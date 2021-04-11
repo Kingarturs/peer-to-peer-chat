@@ -1,6 +1,9 @@
 ### dotenv ###
 .env
 
+### Local history ###
+.history
+
 ### Node ###
 # Logs
 logs
