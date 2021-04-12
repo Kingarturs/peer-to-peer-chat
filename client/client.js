@@ -33,6 +33,11 @@ socket.on("connect", () => {
     console.log("Conexión establecida");
 });
 
+socket.on("Login", (data) => {
+    localStorage.setItem("token", data)
+    window.location.href = "index.html"
+})
+
 socket.on("Signup", (data) => {
     Swal.fire({
         position: 'bottom-end',

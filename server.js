@@ -2,11 +2,9 @@ const path = require('path')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
-const auth = require('./auth')
 const express = require('express')
 const app = express()
 
-app.use(auth)
 app.use(express.static(path.join(__dirname + '/client/')))
 
 const server = require('http').createServer(app)
