@@ -10,11 +10,24 @@
     <title>P2P Chat</title>
 </head>
 <body>
-    
+    <template data-template="message">
+        <div class="message">
+            <div class="message__name"></div>
+            <div class="message__bubble"></div>
+        </div>
+    </template>
+    <div class="content">
+        <div class="messages"></div>
+        <form class="footer" onsubmit="return false;">
+            <input type="text" placeholder="Your message..">
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </body>
 <footer>
     <script src="https://cdn.socket.io/3.1.1/socket.io.min.js" integrity="sha384-gDaozqUvc4HTgo8iZjwth73C6dDDeOJsAgpxBcMpZYztUfjHXpzrpdrHRdVp8ySO" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
     <script defer src="authClient.js"></script>
 </footer>
 </html>

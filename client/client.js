@@ -28,13 +28,13 @@ if (loginContainer) {
 }
 
 // Socket Logic
-
 socket.on("connect", () => {
     console.log("Conexión establecida");
 });
 
-socket.on("Login", (data) => {
+socket.on("Login", (data, username) => {
     localStorage.setItem("token", data)
+    localStorage.setItem("user", username)
     window.location.href = "index.html"
 })
 

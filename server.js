@@ -14,6 +14,7 @@ server.listen(process.env.PORT || 3000, () => {
 const io = require('socket.io')(server)
 
 const MongoClient = require('mongodb').MongoClient
+const { lutimesSync } = require('fs')
 const url = "mongodb://localhost"
 
 clientes = {}
@@ -85,11 +86,11 @@ io.on("connection", socket => {
                     const token = jwt.sign({
                         ip: socket.handshake.address,
                         username: data.username
-                    }, "debugkey" );
+                    }, process.env.DEBUG_KEY );
 
                     clientes[socket.handshake.address] = data.username
-
-                    socket.emit("Login", token)
+                    
+                    socket.emit("Login", token, data.username)
                 }
             })
         } else {
